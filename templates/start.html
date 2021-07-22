@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block title %}Start quiz{% endblock %}
+{% block content %}
+    <div class="form-row text-center">
+        <div class="col-12">
+            <a class="btn btn-success" href="{% url "check" %}">Start quiz →</a>
+        </div>
+    </div>
+{% endblock %}

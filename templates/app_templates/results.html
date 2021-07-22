@@ -1,0 +1,17 @@
+{% extends 'app_layout.html' %}
+
+{% block title %}Results{% endblock %}
+
+{% block create_question %}
+    {% if superuser is not False %}
+        <a class="mt-2" href="{% url "create_question" %}">Create question →</a>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="col-10">
+        <h4><p>Number of correct answers is {{ answer }}.</p></h4>
+        <h4><p>{{ message }}</p></h4>
+    </div>
+    <br><a class="btn btn-primary" href="{% url "quiz" %}">Retry quiz →</a>
+{% endblock %}

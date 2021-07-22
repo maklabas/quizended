@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import ModelForm, RadioSelect
+from django.forms import ModelForm
 
 # from app.views import id_list, random_id_1, random_id_2, random_id_3
 from app import views
@@ -11,7 +11,7 @@ class QuestionForm(ModelForm):
         model = Question
         fields = ['question_text', 'right_answer']
         widgets = {
-            'true_or_false': RadioSelect
+            'question_text': forms.Textarea(attrs={'placeholder': 'Your question text'})
         }
 
 # class Form(forms.Form):

@@ -1,0 +1,17 @@
+{% extends 'app_layout.html' %}
+
+{% block title %}Start quiz{% endblock %}
+
+{% block create_question %}
+    {% if superuser is not False %}
+        <a class="mt-2" href="{% url "create_question" %}">Create question →</a>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="form-row text-center">
+        <div class="col-12">
+            <a class="btn btn-success" href="{% url "quiz" %}">Start quiz →</a>
+        </div>
+    </div>
+{% endblock %}
